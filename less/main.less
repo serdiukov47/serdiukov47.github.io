@@ -1,0 +1,436 @@
+@import 'variables.less';
+@import 'mixins.less';
+/* Logo */
+
+.wrapper{
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header{
+  height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(28, 27, 26, 0.07);
+}
+footer{
+  height: 80px;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(28, 27, 26, 0.1);
+}
+.hidden-description{
+  display: none;
+}
+p{
+  .paragraph();
+}
+.platinum{
+  background-color: @platinum;
+}
+.silver{
+  background-color: @silver;
+}
+.gold{
+  background-color: @gold;
+}
+.bronze{
+  background-color: @bronze;
+
+}
+.catastrophic{
+  background-color: @catastrophic;
+}
+.btn{
+  .paragraph();
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  border: 1px solid rgba(28, 27, 26, 0.1);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  font-size: @small-text;
+  box-sizing: border-box;
+  &__secondary{
+    margin-right: 5px;
+    color:@blue;
+    width: 109px;
+
+  }
+  &__primary{
+    border: none;
+    background-color: @blue;
+    color: @white;
+    width: 68px;
+    border: 1px solid @blue;
+  }
+}
+.burger-button{
+  display: none;
+  .md(display, block);
+  .sm(display, block);
+  .xs(display, block);
+}
+.header-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  .md(justify-content, space-between);
+  .sm(justify-content, space-between);
+  .xs(justify-content, space-between);
+  .md(padding, 0px 47px);
+  .sm(padding, 0px 90px);
+  .xs(padding, 0px 47px);
+  align-items: center;
+}
+.footer-wrapper{
+  display: flex;
+  .md(padding, 0px 47px);
+  .sm(padding, 0px 90px);
+  .xs(padding, 0px 47px);
+  height: 80px;
+  justify-content: flex-start;
+  .xs(justify-content, center);
+  align-items: center;
+  .rights{
+    &__title{
+      font-size: 12px;
+      text-transform: none;
+    }
+  }
+}
+.main-menu{
+  padding-left: 21.95%;
+  .md(display, none);
+  .sm(display, none);
+  .xs(display, none);
+}
+
+.menu-items{
+  margin: 0;
+  padding-left: 0;
+  .menu-item{
+    display: inline-block;
+    padding: 25px 10px;
+    opacity: 0.5;
+    &__link{
+      .paragraph();
+      text-transform: capitalise;
+      text-decoration: none;
+
+    }
+    &.active{
+      opacity: 1;
+      border-bottom: 3px solid @blue;
+    }
+    &:hover{
+      .active;
+    }
+  }
+}
+.footer-menu{
+  padding-left: 20px;
+  .md(display, none);
+  .sm(display, none);
+  .xs(display, none);
+  .menu-items{
+    .menu-item{
+      &.active{
+        border-bottom:none;
+        opacity: 0.5;
+      }
+      &:hover{
+        .active;
+      }
+    }
+  }
+}
+.logo{
+  &__title{
+
+    width: 89px;
+    height: 22px;
+    left: 120px;
+    top: 24px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    background: linear-gradient(45deg, #0B3997 2.76%, #2B8AFF 98.34%, #8AA9D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+
+.insurance-list{
+  margin-bottom: 65px;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    border-bottom: 1px solid rgba(28, 27, 26, 0.1);
+    align-items: flex-end;
+  }
+  &__title{
+    .paragraph(@main-font;@title-text;regular;@text-color;capitalise;1);
+    margin: 0 0 10px;
+  }
+  &__icons{
+    margin-bottom: 10px;
+    .md(display, none);
+    .sm(display, none);
+    .xs(display, none);
+  }
+  &__icon{
+    display: inline-block;
+    padding: 4px 15px;
+    &:last-child{
+      padding-right: 0;
+      border-left: 1px solid rgba(28, 27, 26, 0.1);
+    }
+  }
+}
+.insurance-items{
+  &__header{
+    display: flex;
+    margin:30px 0 16px;
+    p{
+      .paragraph(@main-font;@small-text;900;@text-color;uppercase;0.4);
+    }
+  }
+}
+.insurance-item{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(28, 27, 26, 0.1);
+  p{
+    text-transform: capitalize;
+    font-weight: normal;
+
+  }
+  &__company{
+    width: 15%;
+  }
+  &__company-box{
+    display: flex;
+  }
+  &__logo{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+
+    img{
+      max-width: 100%;
+    }
+  }
+  &__name{
+
+    p{
+      margin: 0 0 3px;
+      line-height: 19px;
+
+    }
+  }
+  &__covering{
+    width: 9.5%;
+  }
+  &__type{
+    width: 8.91666%;
+  }
+  &__metal{
+    width: 14.58333%;
+  }
+  &__drugs{
+    width: 7.33333%;
+  }
+  &__care{
+    width: 9.66666%;
+  }
+  &__yearly{
+    width: 9.83333%;
+  }
+  &__price{
+    width: 10%;
+  }
+  &__action{
+    width: 15.1666%;
+  }
+  &__color{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-bottom: -2px;
+  }
+  &__question{
+    color:@blue;
+    background-color: @light-blue;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: 700;
+    padding-left: 1px;
+    cursor: pointer;
+
+  }
+}
+.grid{
+  .md(padding, 0px 47px);
+  .sm(padding, 0px 90px);
+  .xs(padding, 0px 47px);
+  .insurance-items{
+    padding: 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .md(justify-content, space-around);
+    .sm(justify-content, space-around);
+    .xs(justify-content, space-around);
+    &__header{
+      display: none;
+    }
+  }
+  .insurance-item{
+    width: 282px;
+    display: block;
+    margin-bottom: 40px;
+    padding: 30px 30px 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(28, 27, 26, 0.1);
+    border-radius: 2px;
+    .grid-item-row{
+      width: 100%;
+      text-align: right;
+      position: relative;
+      border-bottom: 1px solid rgba(28, 27, 26, 0.05);
+    }
+    .hidden-description{
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      opacity: 0.5;
+      .insurance-item{
+        &__question{
+          opacity:1;
+          margin-right:5px;
+        }
+      }
+
+    }
+    &__company{
+      width: 100%;
+      padding: 0px 0px 16px 0px;
+
+    }
+    &__company-box{
+      display: flex;
+    }
+    &__logo{
+      width: 55px;
+      height: 55px;
+      margin-right: 20px;
+
+      img{
+        max-width: 100%;
+      }
+    }
+    &__name{
+
+      p{
+        margin: 0 0 3px;
+        font-size: 20px;
+        line-height: 27px;
+
+      }
+    }
+    &__covering{
+      .grid-item-row;
+    }
+    &__type{
+      .grid-item-row;
+    }
+    &__metal{
+      .grid-item-row;
+    }
+    &__drugs{
+      .grid-item-row;
+    }
+    &__care{
+      .grid-item-row;
+    }
+    &__yearly{
+      .grid-item-row;
+      border-bottom: none;
+    }
+    &__price{
+      width:100%;
+      /* $356/mon */
+
+      p{
+        font-size: 36px;
+        text-align: center;
+        line-height: 41px;
+        span{
+          text-transform: lowercase;
+          font-size: 21px;
+        }
+      }
+    }
+    &__action{
+
+      width: 282px;
+      margin: 0 -30px;
+      display: flex;
+    }
+    &__color{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 5px;
+      margin-bottom: -2px;
+    }
+    &__question{
+      color:@blue;
+      background-color: @light-blue;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      font-size: 11px;
+      line-height: 14px;
+      text-align: center;
+      font-weight: 700;
+      padding-left: 1px;
+      cursor: pointer;
+
+    }
+    .btn{
+      border-radius: 0;
+      width: 141px;
+      text-align: center;
+      font-size: 12px;
+      padding: 0;
+      height: 40px;
+      line-height: 40px;
+      &__primary{
+
+      }
+      &__secondary{
+        margin: 0;
+      }
+    }
+  }
+}

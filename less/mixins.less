@@ -1,0 +1,170 @@
+.paragraph(@family:@main-font;@fsz:@regular-text;@weight:regular;@color:@text-color;@transform:uppercase;@opacity:1){
+  font-family: @family;
+  font-style: normal;
+  font-weight: @weight;
+  line-height: normal;
+  font-size: @fsz;
+  letter-spacing: 0.1em;
+  text-transform: @transform;
+  color: @color;
+  opacity: @opacity;
+
+}
+
+.lg(@name, @value){
+    @media screen and (max-width: @break_lg){
+        @{name}: @value;
+    }
+}
+
+.md(@name, @value){
+    @media screen and (max-width: @break_md){
+        @{name}: @value;
+    }
+}
+
+.sm(@name, @value){
+    @media screen and (max-width: @break_sm){
+        @{name}: @value;
+    }
+}
+
+
+.xs(@name, @value){
+    @media screen and (max-width: @break_xs){
+        @{name}: @value;
+    }
+}
+
+
+/*sprite with stars*/
+.reviewStars-input input:checked ~ label, .reviewStars-input label, .reviewStars-input label:hover, .reviewStars-input label:hover ~ label {
+  background: url('../img/stars.png') no-repeat;
+}
+
+.reviewStars-input {
+
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+
+  position: relative;
+  float: left;
+}
+
+.reviewStars-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin: 0;
+  margin-right: 2px;
+  width: 12px;
+  height: 11px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.reviewStars-input input:checked ~ label {
+  background-position: 0 -12px;
+  height: 11px;
+  width: 12px;
+}
+
+.reviewStars-input label {
+  background-position: 0 0;
+  height: 11px;
+  width: 12px;
+  float: right;
+  cursor: pointer;
+  margin-right: 2px;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewStars-input label:hover, .reviewStars-input label:hover ~ label {
+  background-position: 0 -12px;
+  height: 11px;
+  width: 12px;
+}
+
+.reviewStars-input .star-0 {
+  left: 0px;
+}
+.reviewStars-input .star-1 {
+  left: 14px;
+}
+.reviewStars-input .star-2 {
+  left: 28px;
+}
+.reviewStars-input .star-3 {
+  left: 42px;
+}
+.reviewStars-input .star-4 {
+  left: 56px;
+}
+.reviewStars-input .star-5 {
+  left: 70px;
+}
+
+.grid{
+  .reviewStars-input input {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    margin: 0;
+    margin-right: 2.5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+
+  .reviewStars-input input:checked ~ label {
+    background-position: 0 -16px;
+    background-size: 100% auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .reviewStars-input label {
+    background-position: 0 0;
+    background-size: 100% auto;
+    width: 16px;
+    height: 16px;
+    float: right;
+    cursor: pointer;
+    margin-right: 2.5px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .reviewStars-input label:hover, .reviewStars-input label:hover ~ label {
+    background-position: 0 -16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .reviewStars-input .star-0 {
+    left: 0px;
+  }
+  .reviewStars-input .star-1 {
+    left: 18.5px;
+  }
+  .reviewStars-input .star-2 {
+    left: 37px;
+  }
+  .reviewStars-input .star-3 {
+    left: 55.5px;
+  }
+  .reviewStars-input .star-4 {
+    left: 74px;
+  }
+  .reviewStars-input .star-5 {
+    left: 92.5px;
+  }
+}
